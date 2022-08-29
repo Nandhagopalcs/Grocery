@@ -16,7 +16,7 @@ import { SubComponent } from './component/sub/sub.component';
 import { SingleComponent } from './pages/single/single.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { FormsModule } from "@angular/forms";
+import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
@@ -41,7 +41,8 @@ import { LoginComponent } from './pages/login/login.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

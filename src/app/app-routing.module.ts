@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule,Routes } from "@angular/router";
+import { AuthGuard } from "./guard/auth.guard";
 import { ContactComponent } from "./pages/contact/contact.component";
 import { HomeComponent } from "./pages/home/home.component";
 import { LoginComponent } from "./pages/login/login.component";
@@ -9,8 +10,8 @@ import { SingleComponent } from "./pages/single/single.component";
 
 const routes:Routes=[
     {path:'',redirectTo:'home',pathMatch:'full'},
-    {path:'login',component:LoginComponent}
-    {path:'home',component:HomeComponent},
+    {path:'login',component:LoginComponent},
+    {path:'home',component:HomeComponent,canActivate:[AuthGuard]},
     {path:'products/:catId',component:ProductComponent},
     {path:'products/details/:id',component:SingleComponent},
     {path:'about',component:ContactComponent},
