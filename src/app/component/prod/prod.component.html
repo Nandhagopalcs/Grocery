@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-sm-3" *ngFor="let p of info">
+      <div class="card">
+        <img src="http://rjtmobile.com/grocery/images/{{p.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{p.productName}}</h5>
+          <a routerLink="{{'/products/details/'+p._id}}" class="btn btn-warning">BUY</a>
+        </div>
+      </div>
+    </div>
+</div>
